@@ -72,4 +72,4 @@ One issue I ran into was the Priority dropdown appearing blank. After updating t
 - [TypeScript](https://www.typescriptlang.org/docs/)
 - [Vite](https://vite.dev/guide/)
 - [Tailwind CSS](https://tailwindcss.com/docs/)
-- ChatGPT helped with the code, explanations, and troubleshooting.
+- ChatGPT helped with the explanations and troubleshooting.
