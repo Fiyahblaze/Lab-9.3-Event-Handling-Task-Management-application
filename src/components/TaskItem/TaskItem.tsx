@@ -66,3 +66,15 @@ export default function TaskItem({
             <option value="completed">Completed</option>
           </select>
         </label>
+
+         <button
+          className="bg-red-700 text-white hover:bg-red-800"
+          aria-label={`Delete ${task.title}`}
+          onClick={() => onDelete(task.id)}
+        >
+          Delete
+        </button>
+      </div>
+    </li>
+  );
+}
