@@ -15,6 +15,7 @@ export default function TaskFilter({ onFilterChange }: TaskFilterProps) {
     setFilters(updated);
     onFilterChange(updated);
   }
+
   return (
     <div className="mb-4 grid gap-4 rounded-xl bg-white p-4 sm:grid-cols-2">
       <label className="flex flex-col gap-2 font-medium">
@@ -30,7 +31,7 @@ export default function TaskFilter({ onFilterChange }: TaskFilterProps) {
             })
           }
         >
-            <option value="">All Priorities</option>
+          <option value="">All Statuses</option>
           <option value="pending">Pending</option>
           <option value="in-progress">In Progress</option>
           <option value="completed">Completed</option>
@@ -40,7 +41,8 @@ export default function TaskFilter({ onFilterChange }: TaskFilterProps) {
       <label className="flex flex-col gap-2 font-medium">
         Priority
 
-         <select
+        <select
+          className="text-slate-800"
           value={filters.priority ?? ""}
           onChange={(event) =>
             updateFilters({
@@ -49,8 +51,13 @@ export default function TaskFilter({ onFilterChange }: TaskFilterProps) {
                 | undefined,
             })
           }
-        ></select>
-         </label>
+        >
+          <option value="">All Priorities</option>
+          <option value="high">High</option>
+          <option value="medium">Medium</option>
+          <option value="low">Low</option>
+        </select>
+      </label>
     </div>
   );
 }
