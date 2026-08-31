@@ -30,3 +30,13 @@ export default function TaskFilter({ onFilterChange }: TaskFilterProps) {
             })
           }
         >
+             <option value="">All Statuses</option>
+          <option value="pending">Pending</option>
+          <option value="in-progress">In Progress</option>
+          <option value="completed">Completed</option>
+        </select>
+      </label>
+
+      <label className="flex flex-col gap-2 font-medium">
+        Priority
+        
