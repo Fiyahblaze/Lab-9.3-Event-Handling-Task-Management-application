@@ -15,4 +15,18 @@ export default function TaskFilter({ onFilterChange }: TaskFilterProps) {
     setFilters(updated);
     onFilterChange(updated);
   }
-  
+  return (
+    <div className="mb-4 grid gap-4 rounded-xl bg-white p-4 sm:grid-cols-2">
+      <label className="flex flex-col gap-2 font-medium">
+        Status
+
+        <select
+          value={filters.status ?? ""}
+          onChange={(event) =>
+            updateFilters({
+              status: (event.target.value || undefined) as
+                | TaskStatus
+                | undefined,
+            })
+          }
+        >
