@@ -39,4 +39,14 @@ export default function TaskFilter({ onFilterChange }: TaskFilterProps) {
 
       <label className="flex flex-col gap-2 font-medium">
         Priority
-        
+
+         <select
+          value={filters.priority ?? ""}
+          onChange={(event) =>
+            updateFilters({
+              priority: (event.target.value || undefined) as
+                | TaskPriority
+                | undefined,
+            })
+          }
+        ></select>
