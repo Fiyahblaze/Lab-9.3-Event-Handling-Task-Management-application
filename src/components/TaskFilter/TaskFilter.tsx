@@ -50,3 +50,7 @@ export default function TaskFilter({ onFilterChange }: TaskFilterProps) {
             })
           }
         ></select>
+         </label>
+    </div>
+  );
+}
