@@ -48,3 +48,21 @@ export default function TaskItem({
             Completed
           </span>
         )}
+         </div>
+
+         <div className="flex flex-wrap items-center gap-3">
+        <label className="flex flex-wrap items-center gap-2">
+          Status
+
+          <select
+            aria-label={`Status for ${task.title}`}
+            value={task.status}
+            onChange={(event) =>
+              onStatusChange(task.id, event.target.value as TaskStatus)
+            }
+          >
+            <option value="pending">Pending</option>
+            <option value="in-progress">In Progress</option>
+            <option value="completed">Completed</option>
+          </select>
+        </label>
