@@ -1,19 +1,11 @@
 # Reflection
 
-## 1. How did you ensure unique keys for your list items?
+For this project, I updated my previous task manager and turned it into a full dashboard using React, TypeScript, Vite, and Tailwind CSS. I used separate components for the dashboard, task form, filters, task list, and individual tasks. The main dashboard manages the task data and passes the information and functions each component needs through props.
 
-Each task has its own ID, and I used task.id as the key when displaying the list. This helps React keep track of the correct task when tasks are filtered, sorted, or deleted.
+I used TypeScript interfaces to define the task data, form data, filters, component props, and statistics. This helped me catch mistakes while building the project and made it clearer what type of information each component should receive. I also used React state to manage the tasks, filters, sorting, theme, messages, and the task being edited.
 
-## 2. What considerations did you make when implementing the filtering functionality?
+One challenge was connecting the updated types to all the components. Some errors appeared while the project was being updated because the older components were still using the previous props. I worked through the project one section at a time and updated each component until everything connected correctly. I tested the form validation, filters, sorting, task controls, localStorage, import and export features, and production build.
 
-I made sure users could filter by status and priority separately or together. When both filters are selected, a task has to match both choices. Filtering only changes which tasks are displayed and does not delete them. I also included a message when no tasks match.
+I also came to a better understanding of Git commits during this project. In the past, I used general messages such as “first commit,” “second commit,” or “third commit.” I changed that approach and started committing based on the section or feature I was working on. This resulted in fewer commits, but they were more organized and professional because each message clearly explained what was completed.
 
-## 3. How did you handle state updates for task status changes?
-
-I used useState to store the tasks. When a status changes, the handler uses map to find the task with the matching ID. It creates an updated copy of that task while keeping the other tasks unchanged. React then updates the display.
-
-## 4. What challenges did you face when implementing conditional rendering?
-
-I had to keep track of which styles and messages should appear for each condition. Completed tasks needed a green background and a crossed-out title. The list also needed different messages when all tasks were deleted or when no tasks matched the filters.
-
-During testing, the Priority dropdown appeared blank. After updating the TaskFilter component, I checked it again and confirmed the options and filtering worked.
+I enjoy using React and TypeScript with Vite because I can work on each section of my web application separately. Instead of searching through one large file with a lot of code, I can go directly to the component responsible for that feature. This made the project easier to build, understand, test, and fix.

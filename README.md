@@ -1,75 +1,53 @@
-# Task Manager
+# Task Management Dashboard
 
-This is my project for Lab 3: Lists, Keys, and Conditionals. I built a simple task manager using React, TypeScript, Vite, and Tailwind CSS. The project focuses on displaying lists, using unique keys, and showing different styles based on task properties.
+This is my React and TypeScript Task Management Dashboard. I updated my previous task manager project and added more features to make it a complete dashboard.
 
 ## Features
 
-- Display tasks with a title, description, status, priority, and due date.
-- Filter tasks by status and priority.
-- Update a task's status.
-- Delete tasks.
-- Sort tasks by due date.
-- Show different colors for status and priority.
-- Cross out completed task titles.
-- Show a message when no tasks match the filters or the list is empty.
+* Add, edit, delete, and reorder tasks
+* Change task status
+* Search tasks by title or description
+* Filter by status and priority
+* Sort by due date, priority, or title
+* View task statistics
+* Form validation with error messages
+* Light and dark mode
+* Save tasks with localStorage
+* Import and export tasks as JSON
+* Responsive design
+
+## Built With
+
+* React
+* TypeScript
+* Vite
+* Tailwind CSS
+* copilot for error research and project setup
 
 ## How to Run
 
-Open the project folder in VS Code and run:
+Install the dependencies:
 
 ```bash
 npm install
+```
+
+Start the development server:
+
+```bash
 npm run dev
 ```
 
-Open the local link displayed in the terminal.
-
-To check the production build, run:
+Run the production build:
 
 ```bash
 npm run build
 ```
 
-## How to Use
+## Project Structure
 
-Use the dropdowns at the top to filter tasks by status, priority, or both. Select All Statuses and All Priorities to display every task again.
+The application is separated into components for the dashboard, task form, task list, task items, and filters. Shared TypeScript interfaces are stored in the types folder, and reusable functions are stored in the utils folder.
 
-Each task has a status dropdown and a Delete button. Changing a task to Completed turns its background green and crosses out its title.
+## What I Learned
 
-Click Sort by Due Date to show the earliest date first. Click Use Original Order to change it back.
-
-The app does not permanently save changes. Refreshing the page restores the sample tasks.
-
-## Components
-
-- App.tsx stores the tasks and handles status changes and deletion.
-- TaskList.tsx filters, sorts, and displays the tasks.
-- TaskItem.tsx displays one task and its controls.
-- TaskFilter.tsx displays the status and priority filters.
-- types/index.ts contains the shared TypeScript types and interfaces.
-
-Example usage in App.tsx:
-
-```tsx
-<TaskList
-  tasks={tasks}
-  onStatusChange={handleStatusChange}
-  onDelete={handleDelete}
-/>
-```
-
-TaskList receives the task list and the functions needed to update or delete a task.
-
-## What I Practiced
-
-I practiced using React state, passing props between components, and rendering lists with unique keys. I also practiced filtering data and using conditions to change what appears on the screen.
-
-One issue I ran into was the Priority dropdown appearing blank. After updating the TaskFilter component, the choices displayed correctly and the filter worked.
-
-## Resources
-
-- [React](https://react.dev/learn)
-- [TypeScript](https://www.typescriptlang.org/docs/)
-- [Vite](https://vite.dev/guide/)
-- [Tailwind CSS](https://tailwindcss.com/docs/)
-- ChatGPT helped with the explanations and troubleshooting.
+This project helped me better understand React state, props, controlled forms, TypeScript interfaces, localStorage, and communication between components. I also learned how much easier it is to manage a project when each feature is separated into its own component.
